@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUIS KOTOBA</title>
+  
+  <!-- Tailwind CSS v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <style>
+    body {
+      /* Menggunakan Biru Gelap sebagai Background Utama */
+      /*background-color: #134E8E;*/
+      
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Input Search */
+    .search-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid #FF4400;
+    }
+    .search-box:focus {
+      border-color: #FF4400;
+      background-color: rgba(255, 255, 255, 0.15);
+      outline: none;
+    }
+
+    /* Card Item */
+    .quiz-card {
+      background-color: white;
+      border-bottom: 4px solid #C00707; /* Aksen Merah di bawah */
+      transition: all 0.3s ease;
+    }
+    .quiz-card:hover {
+      transform: translateY(-3px);
+      border-bottom-color: #FF4400; /* Berubah jadi Oranye Cerah saat hover */
+    }
+
+    /* Button */
+    .btn-action {
+      background-color: #FF4400;
+      color: white;
+      transition: all 0.2s;
+    }
+    .btn-action:hover {
+      background-color: #FFB33F;
+      color: #134E8E;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+  <div class="container mx-auto px-6 py-12 max-w-xl flex-1">
+    
+    <!-- Header -->
+    <header class="mb-10 text-center sm:text-left">
+      <h1 class="text-3xl font-black tracking-tight text-[#FFB33F] uppercase">KOTOBA KUIS</h1>
+      <p class="text-[#134E8E] text-sm font-medium">Latihan kosakata Jepang dengan gaya.</p>
+    </header>
+
+    <!-- Search Box -->
+    <div class="mb-8">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari"
+        class="search-box w-full text-[#134E8E] font-medium px-5 py-4 rounded-xl transition-all placeholder-[#dadada]"
+      >
+    </div>
+
+    <!-- List Container -->
+    <div id="listContainer" class="space-y-4">
+      <!-- Data Load via JS -->
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-10 text-center border-t border-[#FFB33F] mt-10">
+    <p class="text-[11px] text-[#134E8E] uppercase tracking-[0.2em] font-bold">
+      &copy; <span id="currentYear"></span> Kotoba Quiz — Powered by <span class="text-[#FFB33F]"><a href="https://www.instagram.com/riki.ocs6?igsh=cWJicjExeW1pODM=">Ricky</a></span>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
